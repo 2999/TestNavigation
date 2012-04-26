@@ -1,0 +1,13 @@
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bin\Debug\resources.pri
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bin\Debug\AppxManifest.xml
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bin\Debug\TestNavigation.build.appxrecipe
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\priconfig.xml
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\layout.resfiles
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\resources.resfiles
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\pri.resfiles
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\LanguageQualifiers.txt
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\ProjectArchitectures.txt
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\priconfig.xml.intermediate
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\layout.resfiles.intermediate
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\resources.resfiles.intermediate
+C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bld\Debug\pri.resfiles.intermediate

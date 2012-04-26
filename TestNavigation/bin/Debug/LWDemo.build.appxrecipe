@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WB_MQY-PC</Machine>
+    <WindowsUser>Jiangzhizi</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <Modified>2012-04-26T16:56:26.351</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-04-26T15:53:00.771</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\css\homePage.css">
+      <PackagePath>css\homePage.css</PackagePath>
+      <Modified>2012-04-26T15:53:00.777</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\groupDetailPage.css">
+      <PackagePath>html\groupDetailPage.css</PackagePath>
+      <Modified>2012-04-26T16:48:57.506</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.css">
+      <PackagePath>html\groupedItemsPage.css</PackagePath>
+      <Modified>2012-04-26T16:35:10.486</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\itemDetailPage.css">
+      <PackagePath>html\itemDetailPage.css</PackagePath>
+      <Modified>2012-04-26T16:52:22.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-04-26T16:56:06.111</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\groupDetailPage.html">
+      <PackagePath>html\groupDetailPage.html</PackagePath>
+      <Modified>2012-04-26T16:48:26.510</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\homePage.html">
+      <PackagePath>html\homePage.html</PackagePath>
+      <Modified>2012-04-26T16:11:49.658</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.html">
+      <PackagePath>html\groupedItemsPage.html</PackagePath>
+      <Modified>2012-04-26T16:48:00.836</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\itemDetailPage.html">
+      <PackagePath>html\itemDetailPage.html</PackagePath>
+      <Modified>2012-04-26T16:53:04.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\groupDetailPage.js">
+      <PackagePath>html\groupDetailPage.js</PackagePath>
+      <Modified>2012-04-26T16:50:52.681</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.js">
+      <PackagePath>html\groupedItemsPage.js</PackagePath>
+      <Modified>2012-04-26T16:44:28.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\itemDetailPage.js">
+      <PackagePath>html\itemDetailPage.js</PackagePath>
+      <Modified>2012-04-26T16:53:48.535</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\js\data.js">
+      <PackagePath>js\data.js</PackagePath>
+      <Modified>2012-02-14T05:21:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-04-26T15:53:00.599</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\js\navigator.js">
+      <PackagePath>js\navigator.js</PackagePath>
+      <Modified>2012-04-26T16:56:07.513</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\js\homePage.js">
+      <PackagePath>js\homePage.js</PackagePath>
+      <Modified>2012-04-26T16:45:35.176</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <Modified>2012-02-14T05:21:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <Modified>2012-02-14T05:21:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <Modified>2012-02-14T05:21:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <Modified>2012-02-14T05:21:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-04-26T16:53:58.423</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS\0.6\">
+      <Name>Microsoft.WinJS.0.6.Debug</Name>
+      <Version>0.6.8229.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.0.6.Debug, MinVersion=0.6.8229.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS\0.6\Microsoft.WinJS.0.6.Debug.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
