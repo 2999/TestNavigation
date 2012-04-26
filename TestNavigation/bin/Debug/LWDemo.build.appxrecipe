@@ -9,7 +9,7 @@
   <ItemGroup>
     <AppXManifest Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
-      <Modified>2012-04-26T16:56:26.351</Modified>
+      <Modified>2012-04-26T19:39:26.252</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,7 +43,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\homePage.html">
       <PackagePath>html\homePage.html</PackagePath>
-      <Modified>2012-04-26T16:11:49.658</Modified>
+      <Modified>2012-04-26T19:39:12.253</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.html">
       <PackagePath>html\groupedItemsPage.html</PackagePath>
@@ -73,13 +73,17 @@
       <PackagePath>js\default.js</PackagePath>
       <Modified>2012-04-26T15:53:00.599</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\js\jquery-1.7.2.min.js">
+      <PackagePath>js\jquery-1.7.2.min.js</PackagePath>
+      <Modified>2012-04-26T19:37:10.110</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
       <Modified>2012-04-26T16:56:07.513</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\js\homePage.js">
       <PackagePath>js\homePage.js</PackagePath>
-      <Modified>2012-04-26T16:45:35.176</Modified>
+      <Modified>2012-04-26T19:47:21.964</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
@@ -99,7 +103,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Projects\TestNavigation\TestNavigation\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-04-26T16:53:58.423</Modified>
+      <Modified>2012-04-26T19:39:25.940</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
