@@ -2,9 +2,9 @@
     "use strict";
 
     var __DOMAIN__ = 'http://laiwang.com';
-    var __API_DOMAIN__ = 'https://api.laiwang.com/v1';
+    var __API_DOMAIN__ = 'http://api.laiwang.com/v1';
     var __LENGTH__ = 25;
-    var stream = [];
+    // var stream = [];
 
     var groupDescription = "Group Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante";
     var itemDescription = "Item Description: Pellentesque porta mauris quis interdum vehicula urna sapien ultrices velit nec venenatis dui odio in augue cras posuere enim a cursus convallis neque turpis malesuada erat ut adipiscing neque tortor ac erat";
@@ -70,6 +70,13 @@
         { group: sampleGroups[5], title: "Item Title: 8", subtitle: "Item Subtitle: 8", description: itemDescription, content: itemContent, backgroundImage: lightGray }
     ];
 
+    //对以上的group进行了具体定义：laiwang：来往主墙；event：在一起；friend：好友
+    var Groups = [
+        { key: "laiwang", title: "laiwang Feeds", subtitle: "laiwang subtitle title", backgroundImage: darkGray, description: "this is the laiwang brief wall." },
+        { key: "event", title: "event lists", subtitle: "event subtitle title", backgroundImage: darkGray, description: "this is the event lists." },
+        { key: "friend", title: "all friend", subtitle: "friend subtitle title", backgroundImage: darkGray, description: "this is the all friend." }
+    ]
+
     function groupKeySelector(item) {
         return item.group.key;
     }
@@ -84,9 +91,7 @@
         return list.createFiltered(function (item) { return item.group.key === group.key; });
     }
 
-    var list = new WinJS.Binding.List();
-    getStream();
-    var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
+
 
     // TODO: Replace the data with your real data.
     // You can add data from asynchronous sources whenever it becomes available.
@@ -110,8 +115,6 @@
                 this._beforeSend && this._beforeSend(jqXHR, settings);
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                babylon.log('ajax error! url:' + this.url);
-                babylon.log(arguments);
                 this._error && this._error(jqXHR, textStatus, errorThrown);
                 this._failure && this._failure(jqXHR, textStatus, errorThrown);
 
@@ -119,7 +122,7 @@
 
                 if (errorObject.error === "invalid_token" || errorObject.error === "expired_token" || errorObject.error === "invalid_grant") {
                     authentication.refreshAccessToken(function () {
-                        babylon.init();
+                        //babylon.init();//?????????????????????????
                         //$('#index').trigger('click');
                     }, function () {
                         authentication.toAuthorizePage();
@@ -138,39 +141,45 @@
     function getStream(id) {
         ajaxSet();
         var id = id || '';
-        var subUri = {
-            stream: '/feed/post/main/list',
-            incoming: '/feed/post/incoming/list',
-            group: '/feed/post/circle/list'
-        };
+        //var subUri = {
+        //    stream: '/feed/post/main/list',
+        //    incoming: '/feed/post/incoming/list',
+        //    group: '/feed/post/circle/list'
+        //};
         var postData = {
-            'cursor': 10,
+            'cursor': 0,
             'size': __LENGTH__,
             'access_token': localStorage['access_token']
         };
         $.ajax({
             global: false,
-            url: __API_DOMAIN__ + subUri.stream,
+            url: __API_DOMAIN__ + '/feed/post/main/list',  //获取laiwang主墙
             type: 'GET',
             data: postData,
             _success: function (data) {
 
-                if (!$.isArray(data)) {
-                    stream = [data];
-                }
+                data = data.values;
+                //if (!$.isArray(data)) {
+                //    stream = [data];
+                //}
                 //如果取得的值为空
-                if (stream.length === 0) {
+                if (data.length === 0) {
                     return;
                 }
                 for (var index in data) {
-                    stream[index].content = data[index].content.replace(/\n/gi,'<br/>');
+                    data[index].content = data[index].content.replace(/\n/gi, '<br/>');
                 }
-                stream.forEach(function (item) {
+                data.forEach(function (item) {
+                    item.group = Groups[1];//通过上面的ajax请求获取到的都是laiwang主墙信息
                     list.push(item);
-                });               
+                });
             }
         });
     }
+
+    var list = new WinJS.Binding.List();
+    getStream();
+    var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
 
     WinJS.Namespace.define("data", {
         items: groupedItems,
@@ -178,3 +187,5 @@
         getItemsFromGroup: getItemsFromGroup
     });
 })();
+
+

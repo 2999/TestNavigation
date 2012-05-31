@@ -1,6 +1,11 @@
 ﻿(function () {
     "use strict";
 
+    var __DOMAIN__ = 'http://laiwang.com';
+    var __API_DOMAIN__ = 'http://api.laiwang.com/v1';
+    var __LENGTH__ = 25;
+   // var stream = [];
+
     var groupDescription = "Group Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante";
     var itemDescription = "Item Description: Pellentesque porta mauris quis interdum vehicula urna sapien ultrices velit nec venenatis dui odio in augue cras posuere enim a cursus convallis neque turpis malesuada erat ut adipiscing neque tortor ac erat";
     var itemContent = "<p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat";
@@ -79,14 +84,94 @@
         return list.createFiltered(function (item) { return item.group.key === group.key; });
     }
 
-    var list = new WinJS.Binding.List();
-    var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
+    
 
     // TODO: Replace the data with your real data.
     // You can add data from asynchronous sources whenever it becomes available.
-    sampleItems.forEach(function (item) {
-        list.push(item);
-    });
+    //sampleItems.forEach(function (item) {
+    //    list.push(item);
+    //});
+
+    //重新设置jQuery的ajax
+    function ajaxSet() {
+        $.ajaxSetup({
+            cache: false,
+            dataType: 'json',
+            data: {},
+            beforeSend: function (jqXHR, settings) {
+                if (typeof this.data === 'string') {
+                    this.data = this.data.replace(/%[0-1][0-9a-f]/g, '%20');
+                    this.data += '&access_token=' + localStorage['access_token'];
+                } else if (typeof this.data === 'object') {
+                    this.data['access_token'] = localStorage['access_token'];
+                }
+                this._beforeSend && this._beforeSend(jqXHR, settings);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                this._error && this._error(jqXHR, textStatus, errorThrown);
+                this._failure && this._failure(jqXHR, textStatus, errorThrown);
+
+                var errorObject = $.parseJSON(jqXHR.responseText);
+
+                if (errorObject.error === "invalid_token" || errorObject.error === "expired_token" || errorObject.error === "invalid_grant") {
+                    authentication.refreshAccessToken(function () {
+                        //babylon.init();//?????????????????????????
+                        //$('#index').trigger('click');
+                    }, function () {
+                        authentication.toAuthorizePage();
+                    });
+                }
+            },
+            success: function (data, textStatus, jqXHR) {
+                if (!data) return;
+                this._success && this._success(data, textStatus, jqXHR);
+            }
+        });
+    }
+
+    //根据id获得某人的主墙
+    //没有id也行
+    function getStream(id) {
+        ajaxSet();
+        var id = id || '';
+        var subUri = {
+            stream: '/feed/post/main/list',
+            incoming: '/feed/post/incoming/list',
+            group: '/feed/post/circle/list'
+        };
+        var postData = {
+            'cursor': 0,
+            'size': __LENGTH__,
+            'access_token': localStorage['access_token']
+        };
+        $.ajax({
+            global: false,
+            url: __API_DOMAIN__ + subUri.stream,
+            type: 'GET',
+            data: postData,
+            _success: function (data) {
+                
+                data = data.values;
+                //if (!$.isArray(data)) {
+                //    stream = [data];
+                //}
+                //如果取得的值为空
+                if (data.length === 0) {
+                    return;
+                }
+                for (var index in data) {
+                    data[index].content = data[index].content.replace(/\n/gi, '<br/>');
+                }
+                data.forEach(function (item) {
+                    list.push(item);
+                });               
+            }
+        });
+    }
+
+    var list = new WinJS.Binding.List();
+    getStream();
+    var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
 
     WinJS.Namespace.define("data", {
         items: groupedItems,

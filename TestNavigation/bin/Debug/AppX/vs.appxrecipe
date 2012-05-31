@@ -15,7 +15,7 @@
   <ItemGroup>
     <AppXManifest Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
-      <Modified>2012-05-04T20:32:59.362</Modified>
+      <Modified>2012-05-31T15:20:55.874</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -45,19 +45,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\groupDetailPage.html">
       <PackagePath>html\groupDetailPage.html</PackagePath>
-      <Modified>2012-05-04T20:31:37.464</Modified>
+      <Modified>2012-05-31T13:45:29.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\homePage.html">
       <PackagePath>html\homePage.html</PackagePath>
-      <Modified>2012-05-04T20:31:37.480</Modified>
+      <Modified>2012-05-31T14:48:32.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.html">
       <PackagePath>html\groupedItemsPage.html</PackagePath>
-      <Modified>2012-05-04T20:31:37.480</Modified>
+      <Modified>2012-05-31T14:46:22.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\itemDetailPage.html">
       <PackagePath>html\itemDetailPage.html</PackagePath>
-      <Modified>2012-05-04T20:31:37.480</Modified>
+      <Modified>2012-05-31T13:45:29.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\groupDetailPage.js">
       <PackagePath>html\groupDetailPage.js</PackagePath>
@@ -65,7 +65,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.js">
       <PackagePath>html\groupedItemsPage.js</PackagePath>
-      <Modified>2012-05-04T20:31:37.480</Modified>
+      <Modified>2012-05-31T16:32:55.200</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\itemDetailPage.js">
       <PackagePath>html\itemDetailPage.js</PackagePath>
@@ -73,7 +73,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\js\data.js">
       <PackagePath>js\data.js</PackagePath>
-      <Modified>2012-05-04T20:31:37.527</Modified>
+      <Modified>2012-05-31T16:59:00.005</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\js\default.js">
       <PackagePath>js\default.js</PackagePath>
@@ -89,7 +89,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\js\homePage.js">
       <PackagePath>js\homePage.js</PackagePath>
-      <Modified>2012-05-04T20:31:37.527</Modified>
+      <Modified>2012-05-31T15:13:51.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\js\underscore-min.js">
+      <PackagePath>js\underscore-min.js</PackagePath>
+      <Modified>2012-05-31T13:39:05.764</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
@@ -109,7 +113,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-05-04T20:32:57.596</Modified>
+      <Modified>2012-05-31T15:20:53.815</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

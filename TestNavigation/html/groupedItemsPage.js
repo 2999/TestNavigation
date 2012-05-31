@@ -27,9 +27,7 @@
     var nav = WinJS.Navigation;
     var ui = WinJS.UI;
     var utils = WinJS.Utilities;
-    var __DOMAIN__ = 'http://laiwang.com';
-    var __API_DOMAIN__ = 'https://api.laiwang.com/v1';
-    var __LENGTH__ = 25;
+    
 
     //当某项被调用时发生作用
     //如果snapped，转到某分组详细页面
@@ -85,8 +83,7 @@
     }
 
     function ready(element, options) {
-        //ajaxSet()
-
+       
         //从页面上获得控件实体
         var listView = element.querySelector(".groupeditemslist").winControl;
 
