@@ -27,6 +27,24 @@
     var nav = WinJS.Navigation;
     var ui = WinJS.UI;
     var utils = WinJS.Utilities;
+    var __DOMAIN__ = 'http://laiwang.com';
+    var __API_DOMAIN__ = 'https://api.laiwang.com/v1';
+    var __LENGTH__ = 25;
+
+    //当某项被调用时发生作用
+    //如果snapped，转到某分组详细页面
+    //如果正常跳转，转到某项的详细页面
+    function itemInvoked(eventObject) {
+        if (appView.value === appViewState.snapped) {
+            // If the page is snapped, the user invoked a group.
+            var group = data.groups.getAt(eventObject.detail.itemIndex);
+            nav.navigate("/html/groupDetailPage.html", { group: group });
+        } else {
+            // If the page is not snapped, the user invoked an item.
+            var item = data.items.getAt(eventObject.detail.itemIndex);
+            nav.navigate("/html/itemDetailPage.html", { item: item });
+        }
+    }
 
     function groupDataSelector(item){
         return {
@@ -41,32 +59,12 @@
         return item.group.key;
     }
 
-    function itemInvoked(eventObject) {
-        if (appView.value === appViewState.snapped) {
-            // If the page is snapped, the user invoked a group.
-            var group = data.groups.getAt(eventObject.detail.itemIndex);
-            nav.navigate("/html/groupDetailPage.html", { group: group });
-        } else {
-            // If the page is not snapped, the user invoked an item.
-            var item = data.items.getAt(eventObject.detail.itemIndex);
-            nav.navigate("/html/itemDetailPage.html", { item: item });
-        }
-    }
-
-    function ready(element, options) {
-        var listView = element.querySelector(".groupeditemslist").winControl;
-
-        ui.setOptions(listView, {
-            groupHeaderTemplate: element.querySelector(".headerTemplate"),
-            itemTemplate: element.querySelector(".itemtemplate"),
-            oniteminvoked: itemInvoked.bind(this)
-        });
-
-        updateLayout(element, appView.value);
-    }
-
+    //刷新当前页面，展示groupedIem列表
     function updateLayout(element, viewState) {
+
+        //从页面上获得控件实体
         var listView = element.querySelector(".groupeditemslist").winControl;
+
         if (viewState === appViewState.snapped) {
             // If the page is snapped, display a list of groups.
             ui.setOptions(listView, {
@@ -76,7 +74,7 @@
             });
         } else {
             // If the page is not snapped, display a grid of grouped items.
-            var groupDataSource = data.items.createGrouped(groupKeySelector, groupDataSelector).groups;
+            var groupDataSource = data.items.createGrouped(groupKeySelector, groupDataSelector).groups;//？？？？？？？？？？？
 
             ui.setOptions(listView, {
                 itemDataSource: data.items.dataSource,
@@ -85,6 +83,25 @@
             });
         }
     }
+
+    function ready(element, options) {
+        //ajaxSet()
+
+        //从页面上获得控件实体
+        var listView = element.querySelector(".groupeditemslist").winControl;
+
+        //对控件包含的各个item赋值、赋方法
+        ui.setOptions(listView, {
+            groupHeaderTemplate: element.querySelector(".headerTemplate"),//to do rebuild
+            itemTemplate: element.querySelector(".itemtemplate"),//to do rebuild
+            oniteminvoked: itemInvoked.bind(this)
+        });
+
+        //刷新当前页面，展示groupedIem列表
+        updateLayout(element, appView.value);
+    }
+
+   
 
     ui.Pages.define("/html/groupedItemsPage.html", {
         // This function is used in updateLayout to select the data to display
