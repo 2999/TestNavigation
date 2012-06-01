@@ -64,6 +64,7 @@
     <Content Include="html\itemDetailPage.css" />
     <Content Include="html\itemDetailPage.html" />
     <Content Include="html\itemDetailPage.js" />
+    <Content Include="images\background01.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />

@@ -46,15 +46,23 @@
             padding: 6px 15px 2px 15px;
         }
 
+            .groupeditemspage .groupeditemslist .win-item .item-overlay .item-publisher-avatar {               
+                width: 50px;
+                height: 50px;
+            }
+
             .groupeditemspage .groupeditemslist .win-item .item-overlay .item-title {
                 -ms-grid-row: 1;
                 overflow: hidden;
-                width: 220px;
+                width: 160px;
+                margin-left: 60px;
             }
 
             .groupeditemspage .groupeditemslist .win-item .item-overlay .item-subtitle {
                 -ms-grid-row: 2;
-                width: 220px;
+                /*width: 220px;*/
+                width: 160px;
+                margin-left: 60px;
             }
 
 @media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: fullscreen-portrait), screen and (-ms-view-state: filled) {

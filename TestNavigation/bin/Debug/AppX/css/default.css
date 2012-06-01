@@ -5,6 +5,8 @@
 #contenthost {
     height: 100%;
     width: 100%;
+    /*background: url(../images/background01.jpg) repeat-x 0 0 fixed transparent;*/
+    background-color: #0e9a18;
 }
 
 .fragment {
