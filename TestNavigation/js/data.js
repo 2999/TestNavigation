@@ -15,7 +15,7 @@
     // backgroundImage property in your real data to be URLs to images.   
     */
 
-    var lightGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY7h4+cp/AAhpA3h+ANDKAAAAAElFTkSuQmCC";     
+    var lightGray = "../images/item_bac01.jpg"; //"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY7h4+cp/AAhpA3h+ANDKAAAAAElFTkSuQmCC";
     var mediumGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY5g8dcZ/AAY/AsAlWFQ+AAAAAElFTkSuQmCC";
     var darkGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY3B0cPoPAANMAcOba1BlAAAAAElFTkSuQmCC";
     /*
@@ -171,18 +171,37 @@
                     data[index].content = data[index].content.replace(/\n/gi, '<br/>');
                 }
                 data.forEach(function (item) {//to do rebuild
-                    item.group = Groups[0];//通过上面的ajax请求获取到的都是laiwang主墙信息
+                    item.group = Groups[0];//通过上面的ajax请求获取到的都是laiwang主墙信息，所以取Groups数组中的第0项：laiwang
                     item.itemPublisherAvatar = item.publisher.avatar;
                     item.title = item.publisher.name;
                     item.subtitle = transformDate(item.createdAt);
                     item.description = item.content.substr(0, 100);
                     item.content = item.content;
                     item.backgroundImage = (!!(item.attachments[0]) && item.attachments[0].picture) ? item.attachments[0].picture : lightGray;
+                    //如果用户没有发图片，就要用内容代替图片
+                    item.imageReplacer = (!item.attachments[0] || !item.attachments[0].picture) ? item.description : "";
+                    //关于评论
+                    if (!!item.commentCount && item.commentCount !== 0) {
+                        item.comments.forEach(function (v) {
+                            v.group = item;
+                            v.group.key = item.id;
+                            v.commentorLink = __API_DOMAIN__ + "/u/" + v.commentor.id;
+                            v.commentorAvatar = v.commentor.avatar;
+                            v.commentorName = v.commentor.name;
+                            v.commentCreatedAt = transformDate(v.createdAt);
+                            v.comment = v.content;
+                            commentsList.push(v);
+                        });
+                       
+                    }                    
                     list.push(item);
                 });
             }
         });
     }
+
+   
+
 
     //转换时间格式：毫秒-->yyyy-MM-dd HH:mm:ss
     function transformDate(ms) {
@@ -191,14 +210,18 @@
         return sDate;
     }
 
-    var list = new WinJS.Binding.List();
+    var list = new WinJS.Binding.List(), commentsList = new WinJS.Binding.List();
     getStream();
     var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
+    //存放每个item的评论
+    var comments = commentsList.createGrouped(groupKeySelector, groupDataSelector);
 
     WinJS.Namespace.define("data", {
         items: groupedItems,
         groups: groupedItems.groups,
-        getItemsFromGroup: getItemsFromGroup
+        getItemsFromGroup: getItemsFromGroup,
+        transformDate: transformDate,
+        comments: comments
     });
 })();
 

@@ -15,13 +15,13 @@
   <ItemGroup>
     <AppXManifest Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
-      <Modified>2012-06-01T14:57:26.718</Modified>
+      <Modified>2012-06-04T11:43:01.510</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2012-06-01T16:05:37.621</Modified>
+      <Modified>2012-06-04T11:39:23.759</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\css\homePage.css">
       <PackagePath>css\homePage.css</PackagePath>
@@ -33,11 +33,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.css">
       <PackagePath>html\groupedItemsPage.css</PackagePath>
-      <Modified>2012-06-01T16:12:04.624</Modified>
+      <Modified>2012-06-04T19:07:19.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\itemDetailPage.css">
       <PackagePath>html\itemDetailPage.css</PackagePath>
-      <Modified>2012-05-04T20:31:37.480</Modified>
+      <Modified>2012-06-04T18:39:52.866</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\default.html">
       <PackagePath>default.html</PackagePath>
@@ -53,15 +53,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.html">
       <PackagePath>html\groupedItemsPage.html</PackagePath>
-      <Modified>2012-06-01T11:42:46.858</Modified>
+      <Modified>2012-06-04T18:52:01.295</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\itemDetailPage.html">
       <PackagePath>html\itemDetailPage.html</PackagePath>
-      <Modified>2012-05-31T13:45:29.700</Modified>
+      <Modified>2012-06-04T18:36:29.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\groupDetailPage.js">
       <PackagePath>html\groupDetailPage.js</PackagePath>
-      <Modified>2012-05-04T20:31:37.464</Modified>
+      <Modified>2012-06-04T16:05:01.392</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.js">
       <PackagePath>html\groupedItemsPage.js</PackagePath>
@@ -69,11 +69,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\itemDetailPage.js">
       <PackagePath>html\itemDetailPage.js</PackagePath>
-      <Modified>2012-05-04T20:31:37.480</Modified>
+      <Modified>2012-06-04T19:06:57.887</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\js\data.js">
       <PackagePath>js\data.js</PackagePath>
-      <Modified>2012-06-01T11:48:56.557</Modified>
+      <Modified>2012-06-04T19:04:54.189</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\js\default.js">
       <PackagePath>js\default.js</PackagePath>
@@ -97,7 +97,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\images\background01.jpg">
       <PackagePath>images\background01.jpg</PackagePath>
-      <Modified>2012-06-01T15:59:52.524</Modified>
+      <Modified>2012-06-04T12:46:10.368</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\images\item_bac01.jpg">
+      <PackagePath>images\item_bac01.jpg</PackagePath>
+      <Modified>2012-06-04T12:49:19.078</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
@@ -117,7 +121,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-06-01T14:57:24.533</Modified>
+      <Modified>2012-06-04T10:41:17.608</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

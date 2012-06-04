@@ -19,6 +19,7 @@
         element.querySelector("header[role=banner] .pagetitle").textContent = group.title;
 
         var listView = element.querySelector(".grouplist").winControl;
+
         ui.setOptions(listView, {
             itemDataSource: pageList.dataSource,
             itemTemplate: element.querySelector(".itemtemplate"),
@@ -30,6 +31,7 @@
     }
 
     function updateLayout(element, viewState) {
+
         var listView = element.querySelector(".grouplist").winControl;
 
         if (viewState === Windows.UI.ViewManagement.ApplicationViewState.snapped) {

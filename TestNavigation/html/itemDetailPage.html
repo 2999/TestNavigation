@@ -30,6 +30,18 @@
         </section>
     </div>-->
 
+    <!--评论html模板-->    
+    <div class="item-comment" data-win-control="WinJS.Binding.Template">
+        <a class="commentor-avatar" href="#" data-win-bind="href:commentorLink;alt:commentorAvatarLink">
+            <img src="#" data-win-bind="src:commentorAvatar;alt:title" />
+        </a>
+        <a class="commentor-name" href="#" data-win-bind="href:commentorLink;alt:commentorName;textContent:commentorName"></a>
+        <span class="comment-time" data-win-bind="textContent:commentCreatedAt"></span>
+        <div class="comment-content" data-win-bind="textContent:comment"></div>
+        <input class="comment-replay" type="button" value="回复" />
+    </div>
+    
+
     <!-- The content that will be loaded and displayed. -->
     <div class="itemdetailpage fragment">
         <header aria-label="Header content" role="banner">
@@ -46,9 +58,13 @@
                         <h4 class="item-subtitle"></h4>
                     </header>
                     <img class="item-image" src="#" />
-                    <div class="item-content"></div>
+                    <div class="item-content"></div>                    
                 </div>
-            </article>
+                <div>
+                    <h2 class="item-comment-title">评论</h2>
+                    <div class="item-comment-wrapper" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
+                </div>
+            </article>            
         </section>
     </div>
 </body>

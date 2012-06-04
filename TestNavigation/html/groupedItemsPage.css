@@ -29,40 +29,52 @@
 
     .groupeditemspage .groupeditemslist .win-item {
         -ms-grid-columns: 1fr;
-        -ms-grid-rows: 1fr 90px;
+        -ms-grid-rows: 1fr 50px;
         display: -ms-grid;
         height: 250px;
         width: 250px;
+        /*background: url(../images/item_bac01.jpg) no-repeat 0 0 fixed transparent;*/
+        background-color: #5bbb61;
     }
 
         .groupeditemspage .groupeditemslist .win-item .item-image {
-            -ms-grid-row-span: 2;
+            -ms-grid-row-span: 2;             
+        }
+
+        .groupeditemspage .groupeditemslist .win-item .item-image-replacer {
+            line-height: 1.3em;
+            padding: 10px;
+            overflow: hidden;
+            font-size: 15pt;
         }
 
         .groupeditemspage .groupeditemslist .win-item .item-overlay {
             -ms-grid-row: 2;
-            -ms-grid-rows: 1fr 21px;
+            -ms-grid-rows: 25px 25px;
+            -ms-grid-columns: 60px 1fr;
             display: -ms-grid;
-            padding: 6px 15px 2px 15px;
+            /*padding: 6px 15px 2px 15px;*/
         }
 
-            .groupeditemspage .groupeditemslist .win-item .item-overlay .item-publisher-avatar {               
+            .groupeditemspage .groupeditemslist .win-item .item-overlay .item-publisher-avatar { 
+                -ms-grid-column: 1;
+                -ms-grid-row: 1;
+                -ms-grid-row-span: 2;
                 width: 50px;
                 height: 50px;
             }
 
             .groupeditemspage .groupeditemslist .win-item .item-overlay .item-title {
                 -ms-grid-row: 1;
+                -ms-grid-column: 2;
                 overflow: hidden;
                 width: 160px;
-                margin-left: 60px;
             }
 
             .groupeditemspage .groupeditemslist .win-item .item-overlay .item-subtitle {
                 -ms-grid-row: 2;
-                /*width: 220px;*/
+                -ms-grid-column: 2;
                 width: 160px;
-                margin-left: 60px;
             }
 
 @media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: fullscreen-portrait), screen and (-ms-view-state: filled) {
