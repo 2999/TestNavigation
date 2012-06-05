@@ -94,6 +94,12 @@
         return list.createFiltered(function (item) { return item.group.key === group.key; });
     }
 
+    //取出item中的评论
+    //function getCommentsFromItem(item) {
+    //    //var items = getItemsFromGroup(item.group);
+    //    return commentsList.createFiltered(function (c) { return c.item.id === item.id; });        
+    //}
+
     // TODO: Replace the data with your real data.
     // You can add data from asynchronous sources whenever it becomes available.
     //sampleItems.forEach(function (item) {
@@ -172,6 +178,7 @@
                 }
                 data.forEach(function (item) {//to do rebuild
                     item.group = Groups[0];//通过上面的ajax请求获取到的都是laiwang主墙信息，所以取Groups数组中的第0项：laiwang
+                    //item.key = item.id;
                     item.itemPublisherAvatar = item.publisher.avatar;
                     item.title = item.publisher.name;
                     item.subtitle = transformDate(item.createdAt);
@@ -181,19 +188,20 @@
                     //如果用户没有发图片，就要用内容代替图片
                     item.imageReplacer = (!item.attachments[0] || !item.attachments[0].picture) ? item.description : "";
                     //关于评论
-                    if (!!item.commentCount && item.commentCount !== 0) {
-                        item.comments.forEach(function (v) {
-                            v.group = item;
-                            v.group.key = item.id;
-                            v.commentorLink = __API_DOMAIN__ + "/u/" + v.commentor.id;
-                            v.commentorAvatar = v.commentor.avatar;
-                            v.commentorName = v.commentor.name;
-                            v.commentCreatedAt = transformDate(v.createdAt);
-                            v.comment = v.content;
-                            commentsList.push(v);
-                        });
-                       
-                    }                    
+                    //if (!!item.commentCount && item.commentCount !== 0) {
+                    //    //commentsList = [];
+                    //    item.comments.forEach(function (v) {
+                    //        v.item = item;
+                    //        //v.item.key = item.id;
+                    //        v.commentorLink = __API_DOMAIN__ + "/u/" + v.commentor.id;
+                    //        v.commentorAvatar = v.commentor.avatar;
+                    //        v.commentorName = v.commentor.name;
+                    //        v.commentCreatedAt = transformDate(v.createdAt);
+                    //        v.comment = v.content;
+                    //        commentsList.push(v);
+                    //    });
+                    //    //item.comments = commentsList;
+                    //}
                     list.push(item);
                 });
             }
@@ -202,7 +210,6 @@
 
    
 
-
     //转换时间格式：毫秒-->yyyy-MM-dd HH:mm:ss
     function transformDate(ms) {
         var sDate = new Date(ms);
@@ -210,18 +217,21 @@
         return sDate;
     }
 
-    var list = new WinJS.Binding.List(), commentsList = new WinJS.Binding.List();
+    var list = new WinJS.Binding.List();
+    //var commentsList = new WinJS.Binding.List();
     getStream();
     var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
     //存放每个item的评论
-    var comments = commentsList.createGrouped(groupKeySelector, groupDataSelector);
+    //var comments = commentsList.createGrouped(groupKeySelector, groupDataSelector);
 
     WinJS.Namespace.define("data", {
+        API_DOMAIN: __API_DOMAIN__,
+        DOMAIN:__DOMAIN__,
         items: groupedItems,
         groups: groupedItems.groups,
         getItemsFromGroup: getItemsFromGroup,
-        transformDate: transformDate,
-        comments: comments
+        //getCommentsFromItem: getCommentsFromItem,
+        transformDate: transformDate
     });
 })();
 

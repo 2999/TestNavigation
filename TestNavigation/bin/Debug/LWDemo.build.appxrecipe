@@ -31,7 +31,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\itemDetailPage.css">
       <PackagePath>html\itemDetailPage.css</PackagePath>
-      <Modified>2012-06-04T18:39:52.866</Modified>
+      <Modified>2012-06-05T16:17:04.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\default.html">
       <PackagePath>default.html</PackagePath>
@@ -63,11 +63,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\html\itemDetailPage.js">
       <PackagePath>html\itemDetailPage.js</PackagePath>
-      <Modified>2012-06-04T19:06:57.887</Modified>
+      <Modified>2012-06-05T17:28:25.617</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\js\data.js">
       <PackagePath>js\data.js</PackagePath>
-      <Modified>2012-06-04T19:04:54.189</Modified>
+      <Modified>2012-06-05T16:47:57.472</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\js\default.js">
       <PackagePath>js\default.js</PackagePath>

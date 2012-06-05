@@ -45,16 +45,16 @@
             margin-right: 20px;
             vertical-align: baseline;
         }
+        
+    .itemdetailpage section[role=main] article .item-comment-title {
+        margin-bottom: 20px;
+        margin-top: 0;
+        break-before: column;
+    }
 
     .itemdetailpage section[role=main] .item-comment-wrapper {
         
-    }
-    
-        .itemdetailpage section[role=main] article .item-comment-title {
-            margin-bottom: 20px;
-            margin-top: 0;
-            break-before: column;
-        }
+    }        
 
         .itemdetailpage section[role=main] .item-comment-wrapper .item-comment {
             width: 480px;
