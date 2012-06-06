@@ -7,11 +7,23 @@
     var ui = WinJS.UI;
     var utils = WinJS.Utilities;
     var API_DOMAIN = data.API_DOMAIN;
-    var comments = new WinJS.Binding.List();
+    var comments;
 
     function ready(element, options) {
         var item = options && options.item ? options.item : data.items.getAt(0);
-        stuff(element, item);
+
+        //item = item.createFiltered(
+        //        function (c) { return c.item.id === item.id; }
+        //        );
+        //获取post的控件实体
+        var listItemView = element.querySelector(".item-detail-wrapper").winControl;
+        ui.setOptions(listItemView, {
+            groupDataSource: item.dataSource,
+            groupHeaderTemplate: element.querySelector(".item-detail")
+        });
+
+
+        //stuff(element, item);
 
         //从页面上获得控件实体
         var listView = element.querySelector(".item-comment-wrapper").winControl;
@@ -19,22 +31,29 @@
         //var comments = data.getCommentsFromItem(item);
         
         //取50条评论，并放入comments数组中
-        getComment(item.id, item.publisher.id, 50);
+        getComment(item, 50);
 
         //to do rebuild  2秒之后再展示数据，防止取不到评论
         setTimeout(function () {
-            var commentList = comments.createGrouped(
-                    function (c) { return item.id; },
-                    function (c) { return item; }
+
+            var commentList = comments.createFiltered(
+                function (c) { return c.item.id === item.id; }
                 );
+
+            //如果没有评论，就让“评论”二字隐藏
+            if (commentList.length === 0) {
+                element.querySelector(".item-comment-title").style.display = "none";
+            } else {
+                element.querySelector(".item-comment-title").textContent = "评论(" + commentList.length + ")";
+            }
 
             //为组件绑定数据和事件
             ui.setOptions(listView, {
                 itemDataSource: commentList.dataSource,// itemDataSource: pageList.dataSource,
                 itemTemplate: element.querySelector(".item-comment")
             });
-        }, 2000);
-        
+
+        }, 500);        
       
 
         //关于跳转
@@ -60,21 +79,22 @@
     }
 
     //获取某一条item(即：post)的评论
-    function getComment(postid, publiserid, size) {
+    function getComment(item, size) {
+        comments = new WinJS.Binding.List();//每次请求时都要重新new WinJS.Binding.List()，否则所有的评论数据都会被push到其中
         $.ajax({
             global: false,
             url: API_DOMAIN + '/post/comment/list',
             type: 'GET',
             data: {
-                'postId': postid,
-                'publisher': publiserid,
+                'postId': item.id,
+                'publisher': item.publisher.id,
                 'size': size,
                 'access_token': localStorage['access_token']
             },
             _success: function (_data) {
                 if (_data.values && _data.values.length !== 0) {
                     _data.values.forEach(function (v) {
-                        //v.item = item;
+                        v.item = item;
                         v.commentorLink = API_DOMAIN + "/u/" + v.commentor.id;
                         v.commentorAvatar = v.commentor.avatar;
                         v.commentorName = v.commentor.name;
@@ -94,3 +114,12 @@
         ready: ready
     })
 })();
+
+
+
+//说明：
+//这里有两种取评论数据的方法
+//一种是把ajax请求放到data.js组件中，并对外开放一个方法，此处调用。
+//                  这种情况貌似是把所有的评论放到一个new WinJS.Binding.List()这样的数组中，在别处取用时要做createFiltered筛选
+//另外一种方法是在本组件中发送ajax请求。
+//                  但每次请求时都要重新new WinJS.Binding.List()，否则所有的评论数据都会被push到其中。

@@ -30,6 +30,16 @@
         </section>
     </div>-->
 
+    <!--post模板-->  
+    <div  class="item-detail" data-win-control="WinJS.Binding.Template">
+        <header>
+            <h2 class="item-title"  data-win-bind="textContent: title"></h2>
+            <h4 class="item-subtitle" data-win-bind="textContent: subtitle"></h4>
+        </header>
+        <img class="item-image" src="#"  data-win-bind="src: backgroundImage; alt: title"/>
+        <div class="item-content" data-win-bind="textContent:content" ></div>                    
+    </div>
+
     <!--评论html模板-->    
     <div class="item-comment" data-win-control="WinJS.Binding.Template">
         <a class="commentor-avatar" href="#" data-win-bind="href:commentorLink;alt:commentorAvatarLink">
@@ -39,8 +49,7 @@
         <span class="comment-time" data-win-bind="textContent:commentCreatedAt"></span>
         <div class="comment-content" data-win-bind="textContent:comment"></div>
         <input class="comment-replay" type="button" value="回复" />
-    </div>
-    
+    </div>    
 
     <!-- The content that will be loaded and displayed. -->
     <div class="itemdetailpage fragment">
@@ -51,20 +60,11 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <article>
-                <div>
-                    <header>
-                        <h2 class="item-title"></h2>
-                        <h4 class="item-subtitle"></h4>
-                    </header>
-                    <img class="item-image" src="#" />
-                    <div class="item-content"></div>                    
-                </div>
-                <div>
-                    <h2 class="item-comment-title">评论</h2>
-                    <div class="item-comment-wrapper" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
-                </div>
-            </article>            
+            <article class="item-detail-wrapper" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></article>
+            <div class="item-comment-part">
+                <h2 class="item-comment-title"></h2>
+                <div class="item-comment-wrapper" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
+            </div>
         </section>
     </div>
 </body>

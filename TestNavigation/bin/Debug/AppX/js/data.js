@@ -221,6 +221,7 @@
     //var commentsList = new WinJS.Binding.List();
     getStream();
     var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
+    
     //存放每个item的评论
     //var comments = commentsList.createGrouped(groupKeySelector, groupDataSelector);
 
