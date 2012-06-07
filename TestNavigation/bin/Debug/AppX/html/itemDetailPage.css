@@ -105,12 +105,14 @@
         }
 
     .itemdetailpage .item-content-comments .win-item {
-        display: -ms-grid;
+        display:-ms-grid;
         -ms-grid-rows: 30px 1fr;
-        -ms-grid-columns: 60px 1fr 1fr;
-        margin-bottom: 20px;
-        height: 110px;
+        -ms-grid-columns: 60px 1fr 3fr;
+        margin-bottom: 10px;
+        min-height: 110px;
+        height: auto;
         width: 472px;
+        font-size: 14pt;
     }
 
     .itemdetailpage .item-content-comments  .win-item .commentor-avatar {
@@ -118,18 +120,22 @@
         height: 50px; 
         -ms-grid-row-align: start;
         -ms-grid-row-span: 2;
+        display: block;
     }
     
     .itemdetailpage .item-content-comments  .win-item .commentor-name {
                 -ms-grid-column: 2;
                 -ms-grid-row: 1;
                 -ms-grid-row-align: center;
+                display: block;
     }
         
     .itemdetailpage .item-content-comments  .win-item .comment-time {
         -ms-grid-column: 3;
         -ms-grid-row: 1;
         -ms-grid-row-align: center;
+        -ms-grid-column-align: start;
+        display: block;
     }
         
     .itemdetailpage .item-content-comments  .win-item .comment-content {
