@@ -1,5 +1,4 @@
-﻿/* This selector is used to prevent ui-dark/light.css from overwriting changes
-   to .win-surface. */
+﻿/* This selector is used to prevent ui-dark/light.css from overwriting changes to .win-surface. */
 .groupdetailpage .grouplist .win-horizontal.win-viewport .win-surface {
     margin-left: 120px;
     margin-bottom: 20px;

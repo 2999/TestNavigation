@@ -10,48 +10,53 @@
     var comments;
 
     function ready(element, options) {
+        comments = new WinJS.Binding.List();//每次请求时都要重新new WinJS.Binding.List()，否则所有的评论数据都会被push到其中
         var item = options && options.item ? options.item : data.items.getAt(0);
 
-        //item = item.createFiltered(
-        //        function (c) { return c.item.id === item.id; }
-        //        );
-        //获取post的控件实体
-        var listItemView = element.querySelector(".item-detail-wrapper").winControl;
-        ui.setOptions(listItemView, {
-            groupDataSource: item.dataSource,
-            groupHeaderTemplate: element.querySelector(".item-detail")
-        });
-
+        //var _item = data.items.createFiltered(function (it) { return it.id === item.id; });
 
         //stuff(element, item);
 
         //从页面上获得控件实体
-        var listView = element.querySelector(".item-comment-wrapper").winControl;
-        ////return commentsList.createFiltered(function (c) { return c.item.id === item.id; });
+        var listView = element.querySelector(".item-content-comments").winControl;
+
+        
         //var comments = data.getCommentsFromItem(item);
         
         //取50条评论，并放入comments数组中
         getComment(item, 50);
 
-        //to do rebuild  2秒之后再展示数据，防止取不到评论
+        //to do rebuild  .5秒之后再展示数据，防止取不到评论
         setTimeout(function () {
 
-            var commentList = comments.createFiltered(
-                function (c) { return c.item.id === item.id; }
-                );
+            //var commentList = comments.createFiltered(
+            //    function (c) { return c.item.id === item.id; }
+            //    );
 
             //如果没有评论，就让“评论”二字隐藏
-            if (commentList.length === 0) {
-                element.querySelector(".item-comment-title").style.display = "none";
+            if (comments.length === 0) {
+                //element.querySelector(".item-comment-title").style.display = "none";
+                
+
             } else {
-                element.querySelector(".item-comment-title").textContent = "评论(" + commentList.length + ")";
+                //element.querySelector(".item-comment-title").textContent = "评论(" + comments.length + ")";
+
+                var groupedComments = comments.createGrouped(function (c) { return c.item.id; }, function (c) { return c.item; });
+                var itemDataSourse = groupedComments.groups.dataSource;
+
+                //为组件绑定数据和事件
+                ui.setOptions(listView, {
+                    //itemDataSource: commentList.dataSource,// itemDataSource: pageList.dataSource,
+                    //itemTemplate: element.querySelector(".item-comment")
+                    groupDataSource: itemDataSourse,
+                    groupHeaderTemplate: element.querySelector(".item-detail"),
+                    itemDataSource: groupedComments.dataSource,
+                    itemTemplate: element.querySelector(".item-comment")
+                });
+                listView.layout = new ui.GridLayout({ groupHeaderPosition: "left" });
             }
 
-            //为组件绑定数据和事件
-            ui.setOptions(listView, {
-                itemDataSource: commentList.dataSource,// itemDataSource: pageList.dataSource,
-                itemTemplate: element.querySelector(".item-comment")
-            });
+            
 
         }, 500);        
       
@@ -79,8 +84,7 @@
     }
 
     //获取某一条item(即：post)的评论
-    function getComment(item, size) {
-        comments = new WinJS.Binding.List();//每次请求时都要重新new WinJS.Binding.List()，否则所有的评论数据都会被push到其中
+    function getComment(item, size) {        
         $.ajax({
             global: false,
             url: API_DOMAIN + '/post/comment/list',
@@ -105,7 +109,8 @@
                 }
                 //lock = false;
             }
-        });       
+        });
+
     }
    
     ui.Pages.define("/html/itemDetailPage.html", {

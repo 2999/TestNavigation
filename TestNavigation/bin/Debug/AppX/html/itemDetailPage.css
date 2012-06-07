@@ -1,21 +1,71 @@
-﻿.itemdetailpage section[role=main] {
+﻿/* This selector is used to prevent ui-dark/light.css from overwriting changes to .win-surface. */
+.itemdetailpage .item-content-comments .win-horizontal.win-viewport .win-surface {
+    margin-left: 120px;
+    margin-bottom: 20px;
+}
+
+/*.itemdetailpage section[role=main] {
     -ms-grid-row: 2;
     display:block;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}*/
+
+.itemdetailpage .item-content-comments {
+    height: 100%;
     position: relative;
     width: 100%;
     z-index: 0;
 }
 
-    .itemdetailpage section[role=main] article {
-        /* Define a multi-column, horizontally scrolling article by default. */
+ .itemdetailpage .item-content-comments .win-groupheader {
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: auto auto auto auto 1fr;
+        display: -ms-grid;
+        height: 100%;
+        margin-left: 0px;
+        margin-right: 70px;
+        padding: 0;
+        width: 480px;
+    }
+
+    .itemdetailpage .item-content-comments .win-groupheader .item-title {
+        -ms-grid-row: 1;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    
+    .itemdetailpage .item-content-comments .win-groupheader .item-subtitle {
+        -ms-grid-row: 2;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .itemdetailpage .item-content-comments .win-groupheader .item-image {
+        -ms-grid-row: 3;
+        min-height: 50px;
+        max-height: 240px;
+        margin-bottom: 3px;
+        width: auto;
+    }
+
+    .itemdetailpage .item-content-comments .win-groupheader .item-content {
+        -ms-grid-row: 4;
+        font-size: 15pt;
+        line-height: 1.8em;
+    }
+
+    /*.itemdetailpage section[role=main] article {
+        // Define a multi-column, horizontally scrolling article by default. 
         column-fill: auto;
         column-gap: 80px;
         column-width: 480px;
         height: calc(100% - 50px);
         margin-left: 120px;
-    }
+    }    
 
         .itemdetailpage section[role=main] article header .item-title {
             margin-bottom: 20px;
@@ -46,18 +96,54 @@
         }
 
 
-    .itemdetailpage section[role=main] .item-comment-part {
-       /*break-before: column;
-       column-span: all;*/
-    }
+    .itemdetailpage section[role=main] .item-comment-part {      
+    }*/
         
-        .itemdetailpage section[role=main] .item-comment-title {
+        .itemdetailpage .item-content-comments .win-groupheader .item-comment-title {
             margin-bottom: 20px;
             margin-top: 0; 
-            /*column-span: all;*/
         }
 
-        .itemdetailpage section[role=main] .item-comment-wrapper {
+    .itemdetailpage .item-content-comments .win-item {
+        display: -ms-grid;
+        -ms-grid-rows: 30px 1fr;
+        -ms-grid-columns: 60px 1fr 1fr;
+        margin-bottom: 20px;
+        height: 110px;
+        width: 472px;
+    }
+
+    .itemdetailpage .item-content-comments  .win-item .commentor-avatar {
+        width: 50px;
+        height: 50px; 
+        -ms-grid-row-align: start;
+        -ms-grid-row-span: 2;
+    }
+    
+    .itemdetailpage .item-content-comments  .win-item .commentor-name {
+                -ms-grid-column: 2;
+                -ms-grid-row: 1;
+                -ms-grid-row-align: center;
+    }
+        
+    .itemdetailpage .item-content-comments  .win-item .comment-time {
+        -ms-grid-column: 3;
+        -ms-grid-row: 1;
+        -ms-grid-row-align: center;
+    }
+        
+    .itemdetailpage .item-content-comments  .win-item .comment-content {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;                
+        -ms-grid-column-span: 2;
+    }
+        
+    .itemdetailpage .item-content-comments  .win-item .comment-replay {
+        -ms-grid-column: 4;
+        -ms-grid-row: 1;
+    }
+
+        /*.itemdetailpage section[role=main] .item-comment-wrapper {
             width: auto;            
         }
 
@@ -100,7 +186,7 @@
         
             .itemdetailpage section[role=main] .item-comment-wrapper .comment-replay {
                 -ms-grid-column: 4;
-            }
+            }*/
 
 @media screen and (-ms-view-state: snapped) {
     .itemdetailpage section[role=main] article {
