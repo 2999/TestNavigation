@@ -1,1 +1,1 @@
-C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\LWDemo.jsproj;neutral
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\LWDemo.jsproj;neutral

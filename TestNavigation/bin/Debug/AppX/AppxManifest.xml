@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:build="http://schemas.microsoft.com/developer/appx/2012/build" IgnorableNamespaces="build">
+  <!--
+    此包清单文件由生成过程生成。
+
+    如果重新生成此文件，将丢失对其所做的更改。若要更正此文件中的错误，请编辑源 .appxmanifest 文件。
+
+    有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
+  -->
   <Identity Name="0df22107-669a-45fa-8dfb-172919fd9ea6" Version="1.0.0.0" Publisher="CN=Jiangzhizi" ProcessorArchitecture="neutral" />
   <Properties>
     <DisplayName>TestNavigation</DisplayName>
@@ -8,11 +15,11 @@
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>
-    <OSMinVersion>6.2</OSMinVersion>
-    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
   </Prerequisites>
   <Resources>
-    <Resource Language="zh-CN" />
+    <Resource Language="ZH-CN" />
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
@@ -26,6 +33,12 @@
     <Capability Name="internetClient" />
   </Capabilities>
   <Dependencies>
-    <PackageDependency Name="Microsoft.WinJS.0.6.Debug" MinVersion="0.6.8229.0" />
+    <PackageDependency Name="Microsoft.WinJS.1.0.RC" MinVersion="1.0.8377.0" />
   </Dependencies>
+  <build:Metadata>
+    <build:Item Name="VisualStudio" Version="11.0" />
+    <build:Item Name="OperatingSystem" Version="6.2.8400.0 (winmain_win8rc.120518-1423)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="11.0.50522.1" />
+    <build:Item Name="MakePri.exe" Version="6.2.8400.0 (winmain_win8rc.120518-1423)" />
+  </build:Metadata>
 </Package>

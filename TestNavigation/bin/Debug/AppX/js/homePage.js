@@ -90,7 +90,7 @@
 
 
     function login2groupedItemspage(ds) {
-        document.querySelector("#your_info").textContent = ds['refresh_token'];
+        //document.querySelector("#your_info").textContent = ds['refresh_token'];
         var link = "/html/groupedItemsPage.html";
         WinJS.Navigation.navigate(link);        
     }

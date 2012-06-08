@@ -24,3 +24,16 @@ C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\b
 C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\bld\Debug\layout.resfiles.intermediate
 C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\bld\Debug\resources.resfiles.intermediate
 C:\Users\Mqy\Documents\Visual Studio 11\Projects\TestNavigation\TestNavigation\bld\Debug\pri.resfiles.intermediate
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bin\Debug\resources.pri
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bin\Debug\AppxManifest.xml
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bin\Debug\LWDemo.build.appxrecipe
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\priconfig.xml.intermediate
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\layout.resfiles.intermediate
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\resources.resfiles.intermediate
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\pri.resfiles.intermediate
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\priconfig.xml
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\layout.resfiles
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\resources.resfiles
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\pri.resfiles
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\LanguageQualifiers.txt
+C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bld\Debug\ProjectArchitectures.txt

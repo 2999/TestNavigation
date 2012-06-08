@@ -9,21 +9,30 @@
 
     WinJS.Namespace.define("LWDemo", {
         PageControlNavigator: WinJS.Class.define(
-        // Define the constructor function for the PageControlNavigator.
-            function (element, options) {
+            // 为 PageControlNavigator 定义构造函数。
+            function PageControlNavigator(element, options) {
                 this.element = element || document.createElement("div");
                 this.element.appendChild(this._createPageElement());
 
                 this.home = options.home;
+                this.lastViewstate = appView.value;
 
                 nav.onnavigated = this._navigated.bind(this);
-                appView.getForCurrentView().onviewstatechanged = this._viewstatechanged.bind(this);
+                window.onresize = this._resized.bind(this);
 
                 document.body.onkeyup = this._keyupHandler.bind(this);
                 document.body.onkeypress = this._keypressHandler.bind(this);
+                document.body.onmspointerup = this._mspointerupHandler.bind(this);
+
+                //LWDemo.navigator = this;
                 nav.navigate(this.home);
             }, {
-                // This function creates a new container for each page.
+                /// <field domElement="true" />
+                element: null,
+                home: "",
+                lastViewstate: 0,
+
+                // 此功能为每个页创建新的容器。
                 _createPageElement: function () {
                     var element = document.createElement("div");
                     element.style.width = "100%";
@@ -31,87 +40,86 @@
                     return element;
                 },
 
-                // This function responds to keypresses to only navigate when
-                // the backspace key is not used elsewhere.
-                _keypressHandler: function (eventObject) {
-                    if (eventObject.key === "Backspace")
+                // 此功能响应 keypresses 以仅在未使用 backspace 键时进行导航。
+                _keypressHandler: function (args) {
+                    if (args.key === "Backspace") {
                         nav.back();
+                    }
                 },
 
-                // This function responds to keyup to enable keyboard navigation.
-                _keyupHandler: function (eventObject) {
-                    if ((eventObject.key === "Left" && eventObject.altKey) || (eventObject.key === "BrowserBack")) {
+                // 此功能响应 keyup 以启用键盘导航。
+                _keyupHandler: function (args) {
+                    if ((args.key === "Left" && args.altKey) || (args.key === "BrowserBack")) {
                         nav.back();
-                    } else if ((eventObject.key === "Right" && eventObject.altKey) || (eventObject.key === "BrowserForward")) {
+                    } else if ((args.key === "Right" && args.altKey) || (args.key === "BrowserForward")) {
                         nav.forward();
                     }
                 },
 
-                // This function responds to navigation by adding new pages
-                // to the DOM.
-                _navigated: function (eventObject) {
-                    var newElement = this._createPageElement();
+                _mspointerupHandler: function (args) {
+                    if (args.button === 3) {
+                        nav.back();
+                    } else if (args.button === 4) {
+                        nav.forward();
+                    }
+                },
+
+                // 此功能通过向 DOM 添加新页面来响应导航。
+                _navigated: function (args) {
+                    var that = this;
+                    var oldElement = that.pageElement;
+                    var newElement = that._createPageElement();
                     var parentedComplete;
                     var parented = new WinJS.Promise(function (c) { parentedComplete = c; });
 
-                    var that = this;
-                    WinJS.UI.Pages.render(eventObject.detail.location, newElement, eventObject.detail.state, parented).
-                        then(function (control) {
+                    args.detail.setPromise(
+                        WinJS.Promise.timeout().then(function () {
+                            if (oldElement.winControl && oldElement.winControl.unload) {
+                                oldElement.winControl.unload();
+                            }
+                            return WinJS.UI.Pages.render(args.detail.location, newElement, args.detail.state, parented);
+                        }).then(function parentElement(control) {
                             that.element.appendChild(newElement);
-                            that.element.removeChild(that.pageElement);
-                            parentedComplete();
-                            document.body.focus();
+                            that.element.removeChild(oldElement);
+                            oldElement.innerText = "";
                             that.navigated();
-                        });
+                            parentedComplete();
+                        })
+                    );
                 },
 
-                // This function is called by _viewstatechanged in order to
-                // pass events to the page.
-                _updateLayout: {
-                    get: function () { return (this.pageControl && this.pageControl.updateLayout) || function () { }; }
+                _resized: function (args) {
+                    if (this.pageControl && this.pageControl.updateLayout) {
+                        this.pageControl.updateLayout.call(this.pageControl, this.pageElement, appView.value, this.lastViewstate);
+                    }
+                    this.lastViewstate = appView.value;
                 },
 
-                _viewstatechanged: function (eventObject) {
-                    (this._updateLayout.bind(this.pageControl))(this.pageElement, eventObject.viewState);
-                },
-
-                // This function updates application controls once a navigation
-                // has completed.
+                // 此功能在完成导航后更新应用程序控件。
                 navigated: function () {
-                    // Do application specific on-navigated work here
+                    // 在此处执行特定的处于导航中的应用程序操作
                     var backButton = this.pageElement.querySelector("header[role=banner] .win-backbutton");
                     if (backButton) {
                         backButton.onclick = function () { nav.back(); };
 
                         if (nav.canGoBack) {
                             backButton.removeAttribute("disabled");
-                        }
-                        else {
+                        } else {
                             backButton.setAttribute("disabled", "disabled");
                         }
                     }
                 },
 
-                // This is the PageControlNavigator object.
+                // 这是 PageControlNavigator 对象。
                 pageControl: {
                     get: function () { return this.pageElement && this.pageElement.winControl; }
                 },
 
-                // This is the root element of the current page.
+                // 这是当前页的根元素。
                 pageElement: {
                     get: function () { return this.element.firstElementChild; }
                 }
             }
-        ),
-
-        // This function navigates to the home page which is defined when the
-        // control is created.
-        navigateHome: function () {
-            var home = document.querySelector("#contenthost").winControl.home;
-            var loc = nav.location;
-            if (loc !== "" && loc !== home) {
-                nav.navigate(home);
-            }
-        },
+        )
     });
 })();

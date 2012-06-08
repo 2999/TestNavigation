@@ -75,11 +75,10 @@
     <Content Include="js\jquery-1.7.2.min.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\homePage.js" />
-    <Content Include="js\underscore-min.js" />
     <None Include="TestNavigation_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="Microsoft.WinJS, Version=0.6" />
+    <SDKReference Include="Microsoft.WinJS.1.0.RC, Version=1.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

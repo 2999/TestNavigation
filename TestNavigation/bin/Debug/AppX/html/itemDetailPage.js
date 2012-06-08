@@ -37,6 +37,12 @@
             if (comments.length === 0) {
                 //element.querySelector(".item-comment-title").style.display = "none";
                 
+                //var itemDataSourse = data.items.
+
+                //ui.setOptions(listView, {
+                //    groupDataSource: itemDataSourse,
+                //    groupHeaderTemplate: element.querySelector(".item-detail")
+                //});
 
             } else {
                 //element.querySelector(".item-comment-title").textContent = "评论(" + comments.length + ")";
@@ -53,11 +59,8 @@
                     itemDataSource: groupedComments.dataSource,
                     itemTemplate: element.querySelector(".item-comment")
                 });
-                listView.layout = new ui.GridLayout({ groupHeaderPosition: "left" });
             }
-
-            
-
+            listView.layout = new ui.GridLayout({ groupHeaderPosition: "left" }); 
         }, 500);        
       
 
