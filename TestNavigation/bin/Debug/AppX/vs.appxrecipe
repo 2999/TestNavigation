@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>Mqy-pc</Machine>
+    <Machine>MQY-PC</Machine>
     <WindowsUser>Jiangzhizi</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
@@ -38,7 +38,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\itemDetailPage.css">
       <PackagePath>html\itemDetailPage.css</PackagePath>
-      <Modified>2012-06-08T13:47:19.681</Modified>
+      <Modified>2012-06-11T17:18:41.883</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\default.html">
       <PackagePath>default.html</PackagePath>
@@ -58,7 +58,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\itemDetailPage.html">
       <PackagePath>html\itemDetailPage.html</PackagePath>
-      <Modified>2012-06-08T15:32:23.241</Modified>
+      <Modified>2012-06-11T18:39:02.864</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\groupDetailPage.js">
       <PackagePath>html\groupDetailPage.js</PackagePath>
@@ -70,11 +70,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\itemDetailPage.js">
       <PackagePath>html\itemDetailPage.js</PackagePath>
-      <Modified>2012-06-08T13:47:19.686</Modified>
+      <Modified>2012-06-11T18:58:56.711</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\data.js">
       <PackagePath>js\data.js</PackagePath>
-      <Modified>2012-06-08T13:47:19.744</Modified>
+      <Modified>2012-06-11T18:58:20.854</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\default.js">
       <PackagePath>js\default.js</PackagePath>

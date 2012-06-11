@@ -1,4 +1,4 @@
-﻿(function () {
+﻿(function (exports) {
     "use strict";
 
     var __DOMAIN__ = 'http://laiwang.com';
@@ -171,6 +171,57 @@
     //存放每个item的评论
     //var comments = commentsList.createGrouped(groupKeySelector, groupDataSelector);
 
+    var groupInfo = function groupInfo() {
+        return {
+            enableCellSpanning: true,
+            cellWidth: 472,
+            cellHeight: 110
+        };
+    }
+
+    var MyCellSpanningJSTemplate = function MyCellSpanningJSTemplate(itemPromise) {
+        return itemPromise.then(function (currentItem) {
+            var result = document.createElement("div");
+
+            // Use source data to decide what size to make the
+            // ListView item
+            result.className = currentItem.data.type;
+            result.style.overflow = "hidden";
+
+            // Display image
+            var image = document.createElement("img");
+            image.className = "commentor-avatar ";
+            image.src = currentItem.data.commentorAvatar;
+            result.appendChild(image);
+
+            var name = document.createElement("div");
+            name.className = "commentor-name";
+            name.innerText = currentItem.data.commentorName;
+            result.appendChild(name);
+
+            var time = document.createElement("div");
+            time.className = "comment-time";
+            time.innerText = currentItem.data.commentCreatedAt;
+            result.appendChild(time);
+
+            var content = document.createElement("div");
+            content.className = "comment-content";
+            //content.style.overflow = "hidden";
+            content.innerText = currentItem.data.comment;
+            result.appendChild(content);
+
+            // Display title
+            //var title = document.createElement("h4");
+            //title.innerText = currentItem.data.title;
+            //body.appendChild(title);
+
+            return result;
+        });
+    }
+
+    exports.groupInfo = groupInfo;
+    exports.MyCellSpanningJSTemplate = MyCellSpanningJSTemplate;
+
     WinJS.Namespace.define("data", {
         API_DOMAIN: __API_DOMAIN__,
         DOMAIN:__DOMAIN__,
@@ -180,6 +231,6 @@
         //getCommentsFromItem: getCommentsFromItem,
         transformDate: transformDate
     });
-})();
+})(Window);
 
 
