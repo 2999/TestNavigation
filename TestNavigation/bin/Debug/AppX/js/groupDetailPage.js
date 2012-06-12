@@ -19,7 +19,7 @@
         element.querySelector("header[role=banner] .pagetitle").textContent = group.title;
 
         var listView = element.querySelector(".grouplist").winControl;
-
+        
         ui.setOptions(listView, {
             itemDataSource: pageList.dataSource,
             itemTemplate: element.querySelector(".itemtemplate"),
@@ -43,7 +43,9 @@
 
     function itemInvoked(eventObject) {
         var item = items.getAt(eventObject.detail.itemIndex);
-        nav.navigate("/html/itemDetailPage.html", { item: item });
+        if (item.group.key === "laiwang1") {
+            nav.navigate("/html/itemDetailPage.html", { item: item });
+        }
     }
 
     ui.Pages.define("/html/groupDetailPage.html", {

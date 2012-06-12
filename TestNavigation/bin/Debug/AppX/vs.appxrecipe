@@ -102,7 +102,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\groupDetailPage.js">
       <PackagePath>js\groupDetailPage.js</PackagePath>
-      <Modified>2012-06-08T13:47:19.673</Modified>
+      <Modified>2012-06-12T15:58:54.585</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\groupedItemsPage.js">
       <PackagePath>js\groupedItemsPage.js</PackagePath>
