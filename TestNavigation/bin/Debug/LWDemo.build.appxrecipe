@@ -16,17 +16,17 @@
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\css\groupDetailPage.css">
+      <PackagePath>css\groupDetailPage.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\css\groupedItemsPage.css">
+      <PackagePath>css\groupedItemsPage.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\css\homePage.css">
       <PackagePath>css\homePage.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\groupDetailPage.css">
-      <PackagePath>html\groupDetailPage.css</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.css">
-      <PackagePath>html\groupedItemsPage.css</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\itemDetailPage.css">
-      <PackagePath>html\itemDetailPage.css</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\css\itemDetailPage.css">
+      <PackagePath>css\itemDetailPage.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\default.html">
       <PackagePath>default.html</PackagePath>
@@ -42,30 +42,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\itemDetailPage.html">
       <PackagePath>html\itemDetailPage.html</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\groupDetailPage.js">
-      <PackagePath>html\groupDetailPage.js</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\groupedItemsPage.js">
-      <PackagePath>html\groupedItemsPage.js</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\html\itemDetailPage.js">
-      <PackagePath>html\itemDetailPage.js</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\data.js">
-      <PackagePath>js\data.js</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\default.js">
-      <PackagePath>js\default.js</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\jquery-1.7.2.min.js">
-      <PackagePath>js\jquery-1.7.2.min.js</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\navigator.js">
-      <PackagePath>js\navigator.js</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\homePage.js">
-      <PackagePath>js\homePage.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\images\background01.jpg">
       <PackagePath>images\background01.jpg</PackagePath>
@@ -88,6 +64,33 @@
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\data.js">
+      <PackagePath>js\data.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\data_itemDetail.js">
+      <PackagePath>js\data_itemDetail.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\groupDetailPage.js">
+      <PackagePath>js\groupDetailPage.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\groupedItemsPage.js">
+      <PackagePath>js\groupedItemsPage.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\itemDetailPage.js">
+      <PackagePath>js\itemDetailPage.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\jquery-1.7.2.min.js">
+      <PackagePath>js\jquery-1.7.2.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\navigator.js">
+      <PackagePath>js\navigator.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\js\homePage.js">
+      <PackagePath>js\homePage.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jiangzhizi\Documents\Visual Studio 2012\Projects\TestNavigation\TestNavigation\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

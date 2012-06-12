@@ -52,18 +52,15 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\default.css" />
+    <Content Include="css\groupDetailPage.css" />
+    <Content Include="css\groupedItemsPage.css" />
     <Content Include="css\homePage.css" />
+    <Content Include="css\itemDetailPage.css" />
     <Content Include="default.html" />
-    <Content Include="html\groupDetailPage.css" />
     <Content Include="html\groupDetailPage.html" />
-    <Content Include="html\groupDetailPage.js" />
     <Content Include="html\homePage.html" />
-    <Content Include="html\groupedItemsPage.css" />
     <Content Include="html\groupedItemsPage.html" />
-    <Content Include="html\groupedItemsPage.js" />
-    <Content Include="html\itemDetailPage.css" />
     <Content Include="html\itemDetailPage.html" />
-    <Content Include="html\itemDetailPage.js" />
     <Content Include="images\background01.jpg" />
     <Content Include="images\item_bac01.jpg" />
     <Content Include="images\logo.png" />
@@ -71,7 +68,11 @@
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\data.js" />
+    <Content Include="js\data_itemDetail.js" />
     <Content Include="js\default.js" />
+    <Content Include="js\groupDetailPage.js" />
+    <Content Include="js\groupedItemsPage.js" />
+    <Content Include="js\itemDetailPage.js" />
     <Content Include="js\jquery-1.7.2.min.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\homePage.js" />
