@@ -201,6 +201,7 @@
     //var commentsList = new WinJS.Binding.List();
     getStream();
     getFriends();
+
     //取出所有的item。是经过“组化”的item。“组化”就是“组化”，一种特殊的数据结构，我也说不清
     var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
 

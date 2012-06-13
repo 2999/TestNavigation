@@ -7,6 +7,8 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Controls_ListViewItemTempla
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "forTest_GridLayout", "forTest_GridLayout\forTest_GridLayout.jsproj", "{14D6C05E-1570-4257-ABDC-2019C33654F6}"
 EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "DynamicCSSRegions", "..\javascriptDemo\Dynamic CSS Regions sample\JavaScript\DynamicCSSRegions.jsproj", "{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -79,6 +81,18 @@ Global
 		{9EE3BA23-05BA-402A-A8B6-F3281C3F8B2C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{9EE3BA23-05BA-402A-A8B6-F3281C3F8B2C}.Release|x64.ActiveCfg = Release|Any CPU
 		{9EE3BA23-05BA-402A-A8B6-F3281C3F8B2C}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Release|ARM.ActiveCfg = Release|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Release|x64.ActiveCfg = Release|Any CPU
+		{CF52E9C2-B7EB-4C1D-A0EE-C15F9F78DDD7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
